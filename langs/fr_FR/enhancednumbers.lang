@@ -1,0 +1,66 @@
+# Copyright (C) 2016      Jonathan Tisseau		<jonathan.tisseau@86dev.fr>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#
+# Générique
+#
+
+Module586338Name = Numéros améliorés
+Module586338Desc = Génération améliorée de numéros pour différentes entités
+
+#
+# Page d'administration
+#
+
+EnNums_Setup = Configuration du module Numéros améliorés
+EnNums_SetupPage = Page de réglage du module Numéros améliorés
+
+#
+# Page À propos
+#
+
+EnNums_About = À propos du module Numéros améliorés
+EnNums_AboutPage = Page à propos du module Numéros améliorés
+
+#
+# Codes
+#
+
+EnNums_Code=code
+EnNums_Type=type
+EnNums_Year=année
+EnNums_Month=mois
+EnNums_Day=jour
+EnNums_Counter=compteur
+
+EnNums_Code_Short=c
+EnNums_Type_Short=t
+EnNums_Year_Short=a
+EnNums_Month_Short=m
+EnNums_Day_Short=j
+EnNums_Counter_Short=#
+
+#
+# Aide
+#
+
+EnNums_Tooltip=<b>Codes disponibles</b> (non sensible à la casse) :<ul>
+EnNums_TooltipCode=<li><code>{code:longueur}</code> ou <code>{c:longueur}</code> : insère le code du tiers avec la longueur spécifiée.<br/><code>{code}</code> ou <code>{c}</code> donnera le code complet.<br/><code>{code:4} ou {c:4}</code> donnera "CCCC", complété par des # à droite si le code est trop court.</li>
+EnNums_TooltipType=<li><code>{type:longueur}</code> ou <code>{t:longueur}</code> : insère le type du tiers avec la longueur spécifiée.<br/><code>{type}</code> ou <code>{t}</code> donnera le type complet.<br/><code>{type:4}</code> ou <code>{t:4}</code> donnera "TTTT", complété par des # à droite si le type est trop court.</li>
+EnNums_TooltipYear=<li><code>{année:longueur}</code> ou <code>{a:longueur}</code> : insère l'année de création de l'entité avec la longueur spécifiée.<br/><code>{année}</code> ou <code>{a}</code> ou <code>{a:4}</code> donnera l'année sur 4 chiffres.<br/><code>{année:2}</code> ou <code>{a:2}</code> donnera les 2 derniers chiffres de l'année.<br/><code>{année:6}</code> ou <code>{a:6}</code> donnera l'année, complétée par des "0" à gauche.<br/>Attention avec <code>{année:1}</code> ou <code>{a:1}</code> car vous obtiendrez des codes redondants après 10 ans d'activité.</li>
+EnNums_TooltipMonth=<li><code>{month:longueur}</code> ou <code>{m:longueur}</code> : insère le mois de création de l'entité avec la longueur spécifiée.<br/><code>{mois}</code> ou <code>{m}</code> ou <code>{m:2}</code> donnera le mois sur 2 chiffres, complété par un "0" à gauche si le mois est trop court.<br/><code>{mois:1}</code> ou <code>{m:1}</code> donnera le mois.<br/><code>{mois:6}</code> ou <code>{m:6}</code> donnera le mois, complété par des "0" à gauche.</li>
+EnNums_TooltipDay=<li><code>{jour:longueur}</code> ou <code>{j:longueur}</code> : insère le jour de création de l'entité avec la longueur spécifiée.<br/><code>{jour}</code> ou <code>{j}</code> ou <code>{j:2}</code> donnera le jour sur 2 chiffres, complété par un "0" à gauche si le jour est trop court.<br/><code>{jour:1}</code> ou <code>{j:1}</code> donnera le jour.<br/><code>{jour:6}</code> ou <code>{j:6}</code> donnera le jour, complété par des "0" à gauche.</li>
+EnNums_TooltipCounter=<li><code>{compteur:longueur,mois de début}</code> ou <code>{#:longueur,mois de début}</code> insère un compteur globale pour l'entité avec la longueur spécifiée et optionnelement se remettant à zéro le mois défini.<br/>Si une remise à zéro est prévu en janvier, le code {année} est obligatoire.<br/>Si la remise à zéro à lieu un autre mois (2 à 12) ou tous les mois (99), les codes {année} et {mois} sont obligatoires.<br/>Définissez 0 comme mois pour utiliser le mois de début de l'exercice fiscal défini dans vos préférences.<br/>Si le compteur est plus grand que la longueur spécifiée, il ne sera pas tronqué mais vous n'aurez plus de numéros "alignés".<br/><code{compteur:4} donnera un compteur sur 4 chiffres sans remise à zéro.<br/><code>{compteur:6,0}</code> donnera un compteur sur 6 chiffres avec remise à zéro le mois de début d'exercice fiscal.<br/><code>{compteur:2,99}</code> donnera un compteur sur 2 chiffres remis à zéro tous les mois.<br/><code>{compteur:10,5}</code> donnera un compteur sur 10 chiffres remis à zéro en mai.</li>
+EnNums_TooltipCodeCounter=<li><u><code>{codecompteur:longueur,mois de début}</code> ou <code>{c#:longueur,mois de début}</code></u> insère un compteur propre au code du tiers qui devient donc obligatoire. L'utilsation est la même que pour <code>{compteur}</code>. Vous ne pouvez pas définir un compteur propre au tiers et un compteur globale en même temps.</li>

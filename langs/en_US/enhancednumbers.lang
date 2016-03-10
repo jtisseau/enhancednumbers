@@ -1,0 +1,74 @@
+# Copyright (C) 2016      Jonathan Tisseau		<jonathan.tisseau@86dev.fr>
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#
+# Generic
+#
+
+Module586338Name = Enhanced Numbers
+Module586338Desc = Enhanced numbering for various entities
+
+#
+# Admin page
+#
+
+EnNums_Setup = Enhanced numbers setup
+EnNums_SetupPage = Enhanced numbers setup page
+
+#
+# About page
+#
+
+About = About
+EnNums_About = About Enhanced Numbers
+EnNums_AboutPage = Enhanced Numbers about page
+
+#
+# Codes
+#
+
+EnNums_Code=code
+EnNums_Type=type
+EnNums_Year=year
+EnNums_Month=month
+EnNums_Day=day
+EnNums_Counter=counter
+
+EnNums_Code_Short=c
+EnNums_Type_Short=t
+EnNums_Year_Short=y
+EnNums_Month_Short=m
+EnNums_Day_Short=d
+EnNums_Counter_Short=#
+
+#
+# Help
+# Note to translators :
+#	If you changed the codes' values above, you should change them in the tooltips below,
+#		for example translate {year:length} to {<EnNums_Year>:<length in your language>}.
+#		Example fr-FR : {year:length} becomes {année:longueur}.
+# 	The CodeCounter correspond to the EnNums_Code value plus the EnNums_Counter value.
+#		Example en-US {codecounter:...}</code> or <code>{c#}
+#		Example fr-FR {codecompteur}</code> or <code>{c#}
+#
+
+EnNums_Tooltip=<b>Available codes</code> (case insensitive) :<ul style="list-style: disc;">
+EnNums_TooltipCode=<li><code>{code:length}</code> or <code>{c:length}</code> : insert the third party code with the specified length.<br/><code>{code}</code> or <code>{c}</code> will give the complete code.<br/><code>{code:4}</code> will give "CCCC", padded on the right with "#" if the code is too short.</li>
+EnNums_TooltipType=<li><code>{type:length}</code> or <code>{t:length}</code> : insert the third party type with the specified length.<br/><code>{type}</code> or <code>{t}</code> will give the complete type.<br/><code>{type:4}</code> will give "TTTT", padded on the right with "#" if the type is too short.</li>
+EnNums_TooltipYear=<li><code>{year:length}</code> or <code>{y:length}</code> : insert the entity's creation's year with the specified length.<br/><code>{year}</code> or <code>{y}</code> or <code>{y:4}</code> will give the year on 4 digits.<br/><code>{year:2} ou {y:2}</code> will give the last 2 digits of the year.<br/><code>{year:6}</code> or <code>{y:6}</code> will give the year, padded on the left with "0".<br/>Be carefull with <code>{year:1}</code> or <code>{y:1}</code> as you will have redundant codes after 10 years of activity.</li>
+EnNums_TooltipMonth=<li><code>{month:length}</code> or <code>{m:length}</code> : insert the entity's creation's month with the specified length.<br/><code>{month}</code> or <code>{m}</code> will give the month on 2 digits, padded on the left with "0" if the month is too short.<br/><code>{month:1}</code> will give the month.<br/><code>{month:6}</code> or <code>{m:6}</code> will give the month, padded on the left with "0".</li>
+EnNums_TooltipDay=<li><code>{day:length}</code> or <code>{d:length}</code> : insert the entity's creation's day with the specified length.<br/><code>{day}</code> or <code>{d}</code> or <code>{d:2}</code> will give the day on 2 digits, padded on the left with "0" if the day is too short.<br/><code>{day:1}</code> will give the day.<br/><code>{day:6}</code> or <code>{d:6}</code> will give the day, padded on the left with "0".</li>
+EnNums_TooltipCounter=<li><u><code>{counter:length,start month}</code> or <code>{#:length,start month}</code></u> : insert a global counter globale to the entity with the specified length and optionally resetting the specified month.<br/>If a reset occurs in january, the <code>{year}</code> code is mandatory.<br/>If a reset occurs an other month (2 to 12) or every month (99), <code>{year}</code> and <code>{month}</code> codes are mandatory.<br/>Set 0 as month to use the first month of fiscal year defined in your settings.<br/>If a code is bigger than the length specified, it won't be truncated but you will no longer have "aligned" numbers.<br/><code>{counter:4}</code> will give a counter on 4 digits never resetting.<br/><code>{counter:6,0}</code> will give a counter on 6 digits resetting on the first month of fiscal year.<br/><code>{counter:2,99}</code> will give a counter on 2 digits resetting every month.<br/><code>{counter:10,5}</code> will give a counter on 10 digits resetting in may.</li>
+EnNums_TooltipCodeCounter=<li><code>{codecounter:length,start month}</code> or <code>{c#:length,start month}</code> : insert a counter related to the third party code, which becomes mandatory. Use it as the <code>{counter}</code> code. You can't specify a third party code counter and a global counter together.</li>
